@@ -37,9 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             renderProducts(data);
             
-            // Now check if .position-vector2 elements are in the DOM
             const vector2Elements = document.querySelectorAll('.position-vector2');
-            console.log('Position-vector2 elements:', vector2Elements); // Should log the NodeList with items
+            console.log('Position-vector2 elements:', vector2Elements); 
         })
         .catch(error => console.error('Error fetching the JSON:', error));
 });
@@ -47,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Function to render products
 function renderProducts(products) {
     const productGrid = document.getElementById('product-grid');
-    productGrid.innerHTML = '';  // Clear existing content
+    productGrid.innerHTML = '';  
 
     products.forEach(product => {
         const productItem = document.createElement('a');
@@ -55,7 +54,7 @@ function renderProducts(products) {
 
         const roundImage = product.roundImage;
 
-        // Define the specific titles for which we want to add a left margin
+        
         const specialTitles = [
             "Breed Dry Dog Food",
           
@@ -119,7 +118,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Show menu when menu icon is clicked
-// Show menu when menu icon is clicked
 const menu = document.querySelector('.menu');
 const menuIcon = document.querySelector('.menu-icon');
 const closeIcon = document.querySelector('.close-icon');
@@ -127,15 +125,13 @@ const closeIcon = document.querySelector('.close-icon');
 // Show menu and close icon when menu icon is clicked
 menuIcon.addEventListener('click', () => {
     menu.style.display = 'block';
-    closeIcon.style.display = 'block'; // Show close icon
-  // Hide menu icon to avoid duplicate icons
+    closeIcon.style.display = 'block'; 
 });
 
 // Hide menu and show menu icon when close icon is clicked
 closeIcon.addEventListener('click', () => {
     menu.style.display = 'none';
-    closeIcon.style.display = 'none'; // Hide close icon
-     // Show menu icon again
+    closeIcon.style.display = 'none'; 
 });
 
 
